@@ -1052,7 +1052,7 @@ def _hurl_attack(params):
 
         params['options'] = options
 
-        hurl_command = 'hurl %(url)s -p %(concurrent_requests)s %(options)s -j' % params
+        hurl_command = 'hurl \"%(url)s\" -p %(concurrent_requests)s %(options)s -j' % params
         stdin, stdout, stderr = client.exec_command(hurl_command)
 
         response = defaultdict(int)
